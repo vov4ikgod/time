@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time tracking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    
+    <section class="dashboard">
+        <div class="dashboard-wrapper">
+            <div class="dashboard-person">
+                <div>
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <img src="./images/anton.png" alt="logo" class="info-card-img">
+                            <i class='bx bxs-cog settings-person-card'></i>
+                        </div>
+                        <div class="info-card-text">
+                            <p class="info-card-subtitle">Report for</p>
+                            <h3 class="info-card-title">Your name</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-menu">
+                        <div class="dashboard-menu-item">Daily</div>
+                        <div class="dashboard-menu-item dashboard-menu-item-active">Weekly</div>
+                        <div class="dashboard-menu-item">Monthly</div>
+                    </div>
+                </div>    
+                
+                <div class="dashboard-person-popup dashboard-person-popup-active">
+                    <div class="info-card">
+                        <div class="info-card-header"> 
+                            <div class="block-input-file">
+                                <input onchange="download(this)" id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file-input custom-file-input popup-info-card-img" id="file_input">
+                                <div class="file-input-result"></div>
+                            </div> 
+                            <i class='bx bx-window-close dashboard-person-popup-close'></i>
+                        </div>
+                        <div class="info-card-text">
+                            <p class="info-card-subtitle">Report for</p>
+                            <input type="text" placeholder="Your name" class="info-card-popup-title">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./js/app.js"></script>
+    <script src="./js/popup-nickname.js"></script>
+    <script src="./js/person-card-modal.js"></script>
+    <script src="./js/img-popup.js"></script>
+    <script src="./js/popup-img.js"></script>
+
+</body>
+</html>
